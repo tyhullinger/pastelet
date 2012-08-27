@@ -1,0 +1,107 @@
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+background-color: #000;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+input, textarea, label {
+display: block;
+}
+
+.form-field {
+display:block;
+margin-bottom: 10px;
+}
+
+.form-field label {
+font-weight: bold;
+font-size: 1.2em;
+}
+
+.button {
+display:inline-block;
+}
+
+#topsection{
+/*background: #EAEAEA;*/
+/*background: #252525;*/
+background: #202020;
+height: 50px; /*Height of top section*/
+/*border-radius: 0px 0px 15px 15px; 
+-moz-border-radius: 0px 0px 15px 15px; 
+-webkit-border-radius: 0px 0px 15px 15px; 
+border-bottom: 1px solid #7F7A80;*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin-right: 200px; /*Set right margin to RightColumnWidth*/
+}
+
+#rightcolumn{
+float: left;
+width: 200px; /*Width of right column in pixels*/
+margin-left: -200px; /*Set left margin to -(RightColumnWidth) */
+background: #FDE95E;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+.sourcetable{
+margin: 25px 0px;
+height: 500px;
+width: 100%;
+}
+
+.code {
+border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px; 
+-webkit-border-radius: 5px 5px 5px 5px; 
+border: 1px solid #7F7A80;
+}
+
+.linenos {
+/*border-radius: 2px 2px 2px 2px;
+-moz-border-radius: 2px 2px 2px 2px; 
+-webkit-border-radius: 2px 2px 2px 2px;*/
+border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px; 
+-webkit-border-radius: 5px 5px 5px 5px; 
+border: 1px solid #7F7A80;
+color: #7F7A80;
+background: #202020;
+}
+
+textarea{
+width: 100%;
+height: 300px;
+}

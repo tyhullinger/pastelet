@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="form_errors">
+    {{ form.errors }}
+</div>
+
+<div id="form_container">
+    <form action="/save" method="post" id="save_form">
+        {% csrf_token %}
+        <div class="form-field">
+            <label for="language">{{ form.language.label }}</label>
+            <select name="language" id="language">
+                {% for language in languages %}
+                    <option value="{{ language.0 }}">{{ language.1 }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="code">{{ form.code.label }}</label>
+            {{ form.code }}
+        </div>
+        <div class="form-actions">
+            <span class="button"><input type="reset" value="Clear" /></span>
+            <span class="button"><input type="submit" value="Save" /></span>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+.code .hll { background-color: #ffffcc }
+.code  { background: #ffffff; }
+.code .c { color: #008b8b } /* Comment */
+.code .k { font-weight: bold } /* Keyword */
+.code .cm { color: #008b8b } /* Comment.Multiline */
+.code .cp { color: #8a2be2 } /* Comment.Preproc */
+.code .c1 { color: #008b8b } /* Comment.Single */
+.code .cs { color: #008b8b } /* Comment.Special */
+.code .kc { font-weight: bold } /* Keyword.Constant */
+.code .kd { font-weight: bold } /* Keyword.Declaration */
+.code .kn { font-weight: bold } /* Keyword.Namespace */
+.code .kp { font-weight: bold } /* Keyword.Pseudo */
+.code .kr { font-weight: bold } /* Keyword.Reserved */
+.code .kt { color: #ff00ff; font-weight: bold } /* Keyword.Type */
+.code .m { color: #ff0000; font-weight: bold; text-decoration: underline } /* Literal.Number */
+.code .no { color: #ff0000; text-decoration: underline } /* Name.Constant */
+.code .ni { color: #ff0000; font-weight: bold } /* Name.Entity */
+.code .nt { font-weight: bold } /* Name.Tag */
+.code .mf { color: #ff0000; font-weight: bold; text-decoration: underline } /* Literal.Number.Float */
+.code .mh { color: #ff0000; font-weight: bold; text-decoration: underline } /* Literal.Number.Hex */
+.code .mi { color: #ff0000; font-weight: bold; text-decoration: underline } /* Literal.Number.Integer */
+.code .mo { color: #ff0000; font-weight: bold; text-decoration: underline } /* Literal.Number.Oct */
+.code .il { color: #ff0000; font-weight: bold; text-decoration: underline } /* Literal.Number.Integer.Long */
