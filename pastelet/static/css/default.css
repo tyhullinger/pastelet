@@ -2,7 +2,10 @@ body{
 margin:0;
 padding:0;
 line-height: 1.5em;
-background-color: #000;
+background-color: #565656;
+-moz-opacity: 0.90;
+opacity: 0.90;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=90);
 }
 
 b{font-size: 110%;}
@@ -29,12 +32,15 @@ display:inline-block;
 #topsection{
 /*background: #EAEAEA;*/
 /*background: #252525;*/
-background: #202020;
+background: #E1E1D6; 
 height: 50px; /*Height of top section*/
 /*border-radius: 0px 0px 15px 15px; 
 -moz-border-radius: 0px 0px 15px 15px; 
 -webkit-border-radius: 0px 0px 15px 15px; 
 border-bottom: 1px solid #7F7A80;*/
+-moz-opacity: 0.24;
+opacity: 0.24;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=24);
 }
 
 #topsection h1{
@@ -45,19 +51,33 @@ padding-top: 15px;
 #contentwrapper{
 float: left;
 width: 100%;
+margin-top: 1%;
 }
 
 #contentcolumn{
-margin-right: 200px; /*Set right margin to RightColumnWidth*/
+margin-right: 300px; /*Set right margin to RightColumnWidth*/
 }
 
 #rightcolumn{
 float: left;
-width: 200px; /*Width of right column in pixels*/
-margin-left: -200px; /*Set left margin to -(RightColumnWidth) */
+width: 300px; /*Width of right column in pixels*/
+margin-left: -300px; /*Set left margin to -(RightColumnWidth) */
 background: #FDE95E;
+margin-top: 1%;
+-moz-opacity: 0.24;
+opacity: 0.24;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=24);
 }
 
+#rightcolumn ul{
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+}
+
+#rightcolumn ul li{
+margin-bottom: 5px;
+}
 #footer{
 clear: left;
 width: 100%;
