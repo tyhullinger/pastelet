@@ -28,3 +28,9 @@
     </form>
 </div>
 {% endblock %}
+
+{% block recent_entries %}
+    {% for pastelet in recent %}
+    <p><a href="/{{ pastelet.url }}">{{ pastelet.language }} by {{ pastelet.name }}</a></p> 
+    {% endfor %}
+{% endblock %}

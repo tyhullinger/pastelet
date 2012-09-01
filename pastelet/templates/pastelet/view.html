@@ -9,11 +9,17 @@
             {% endfor %}
         </select>
     </div>
-    <p>{{ pastelet.language|capfirst }} pastelet submitted by {{ pastelet.name }} on {{ pastelet.created }}</p>
+    <p>{{ pastelet.language|capfirst }} pastelet submitted by {{ pastelet.name }} on {{ pastelet.created}}</p>
     <div class="code-wrapper">
         {{ pastelet.code|safe }}
     </div>
+{% endblock %}
+
+
+{% block recent_entries %}
+    <ul>
     {% for pastelet in recent %}
-    <p><a href="/{{ pastelet.url }}">{{ pastelet.language }} - {{ pastelet.url }}</a></p>
+    <li><a href="/{{ pastelet.url }}">{{ pastelet.language }} by {{ pastelet.name }}</a></li>
     {% endfor %}
+    </ul.
 {% endblock %}

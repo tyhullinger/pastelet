@@ -7,7 +7,7 @@ from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
 
 from django.http import HttpResponseRedirect
-from django.template import RequestContext
+from django.template import loader, RequestContext
 from django.shortcuts import render_to_response, get_object_or_404
 from django.core.context_processors import csrf
 import os
@@ -26,25 +26,23 @@ def get_sorted_lexers():
     data = sorted(data, key=lambda x: x[0])
     return data
 
-def get_recent():
+
+def recent_proc(request):
     recent = Pastelet.objects.order_by('-created')[:20]
-    print recent[0].language
-    return recent
+    return { 'recent': recent }
 
 def index(request):
-    recent = get_recent()
     languages = get_sorted_lexers()
     form = PasteletForm()
     variables = RequestContext(request, {
         'form': form,
-        'recent': recent,
         'languages': languages,
-    })
+    },
+    processors=[recent_proc])
     variables.update(csrf(request))
     return render_to_response('pastelet/index.html', variables)
 
 def view(request, pastelet_id):
-    recent = get_recent()
     p = get_object_or_404(Pastelet, url=pastelet_id)
     lexer = get_lexer_by_name(p.language, stripall=True)
     formatter = HtmlFormatter(linenos=True, cssclass="source")
@@ -55,7 +53,13 @@ def view(request, pastelet_id):
     tmp = []
     for file in files:
         tmp.append(file.replace('.css', ''))
-    return render_to_response('pastelet/view.html', {'pastelet': p, 'styles': tmp, 'recent': recent})
+
+    variables = RequestContext(request, {
+        'pastelet': p,
+        'styles': tmp,
+    },
+    processors=[recent_proc])
+    return render_to_response('pastelet/view.html',variables) 
 
 def save(request):
     if request.method == 'POST':
